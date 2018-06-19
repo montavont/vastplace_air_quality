@@ -56,28 +56,20 @@ Adding a word starting with '#' in the description will also tag this trace as p
 
 h2. Features
 
-This module exposes its features via the following URLs : 
+This module exposes its features via the following URLs :
 
-|URL| Type |Description|
-|---|------|-----------|
-|ambassadair/|HTML| Index|
-|ambassadair/air_map|HTML| Map of all traces |
-
-
-    ^ambassadair/ air_test [name='air_test']
-    ^ambassadair/ bargraph/{(?P<targetId_str>[,\w]+)}$ [name='ambassadair_bargraphs']
-    ^ambassadair/ grafana$ [name='grafana']
-    ^ambassadair/ grafana\.(?P<format>[a-z0-9]+)/?$ [name='grafana']
-    ^ambassadair/ grafana/query$ [name='grafana_query']
-    ^ambassadair/ grafana/query\.(?P<format>[a-z0-9]+)/?$ [name='grafana_query']
-    ^ambassadair/ grafana/search$ [name='grafana_search']
-    ^ambassadair/ grafana/search\.(?P<format>[a-z0-9]+)/?$ [name='grafana_search']
-    ^ambassadair/ grafana_sources$ [name='grafana']
-    ^ambassadair/ grafana_sources\.(?P<format>[a-z0-9]+)/?$ [name='grafana']
-    ^ambassadair/ grafana_sources/query$ [name='grafana_sources_query']
-    ^ambassadair/ grafana_sources/query\.(?P<format>[a-z0-9]+)/?$ [name='grafana_sources_query']
-    ^ambassadair/ grafana_sources/search$ [name='grafana_sources_search']
-    ^ambassadair/ grafana_sources/search\.(?P<format>[a-z0-9]+)/?$ [name='grafana_sources_search']
+|URL                                 | Type |Description                                   |
+|------------------------------------|------|----------------------------------------------|
+|ambassadair/                        | HTML | Index                                        |
+|ambassadair/air_map                 | HTML | Map of all traces                            |
+|ambassadair/air_test                | HTML | Geographic cell processing                   |
+|ambassadair/bargraph/<targetId_str> | HTML | Air quality bargraph for ids in target_Ids, separated by commas |
+|ambassadair/grafana$                | HTML | grafana interfacing function                 |
+|ambassadair/grafana/query$          | HTML | grafana interfacing function                 |
+|ambassadair/grafana/search$         | HTML | grafana interfacing function                 |
+|ambassadair/grafana_sources$        | HTML | grafana interfacing function for datasources |
+|ambassadair/grafana_sources/query$  | HTML | grafana interfacing function for datasources |
+|ambassadair/grafana_sources/search$ | HTML | grafana interfacing function for datasources |
 
 
 ## License
