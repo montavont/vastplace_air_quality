@@ -1,6 +1,6 @@
 # vastplace air quality module
 
-This project is a module for the [https://github.com/tkerdonc/vastplace](vastplace) project. It parses csv files storing air quality sensors and gps coordinates.
+This project is a module for the [vastplace](https://github.com/tkerdonc/vastplace) project. It parses csv files storing air quality sensors and gps coordinates.
 
 ## Getting Started
 
