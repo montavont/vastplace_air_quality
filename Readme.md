@@ -58,10 +58,12 @@ h2. Features
 
 This module exposes its features via the following URLs : 
 
-|URL| Type Description||
+|URL| Type |Description|
+|---|------|-----------|
+|ambassadair/|HTML| Index|
+|ambassadair/air_map|HTML| Map of all traces |
 
-ambassadair/ ^$ [name='index']
-ambassadair/ air_map [name='air_map']
+
     ^ambassadair/ air_test [name='air_test']
     ^ambassadair/ bargraph/{(?P<targetId_str>[,\w]+)}$ [name='ambassadair_bargraphs']
     ^ambassadair/ grafana$ [name='grafana']
