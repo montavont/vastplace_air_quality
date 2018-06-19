@@ -23,18 +23,18 @@ This linked the ap_subset module sources to a local folder of vastplace, we now 
 vim centraldb/settings.py
 </pre>
 
-and add 
+and add
 <pre>
 'experiments.vastplace_air_quality'
 </pre>
  to the *INSTALLED_APPS* entry
-We also need to route the urls to the ap_subset module : 
+We also need to route the urls to the ap_subset module :
 
 <pre>
 vim centraldb/urls.py
 </pre>
 
-and add 
+and add
 <pre>
 url(r'^air_quality/', include('experiments.vastplace_air_quality.urls')),
 </pre>
@@ -43,18 +43,23 @@ to the *urlpatterns* entry.
 
 the ap_subset module should now be enabled.
 
-h2. Uploading a trace
+## Uploading a trace
 
-This module parses wi2me traces that can be stored in either csv or the old sqlite format.
+This module parses csv traces with the following format :
 
+```
+YYYY-MM-DDTHH:mm:ss.mmm+00:00,<latitude>,<longitude>,<pm2.5 measurement>
+```
+
+Navigate to the following url, and use the trace upload form.
 <pre>
 /campaignfiles/content
 </pre>
 
-Once the trace uploaded, you are prompted with the detail filling form. You must pick the *wi2me_csv* or *wi2me_sqlite* depending on what format wi2me used.
+Once the trace uploaded, you are prompted with the detail filling form. You must pick the *ambassadair_mobile* or *ambassadair_static* format. Once save, a map will be plotted.
 Adding a word starting with '#' in the description will also tag this trace as part of the campaign named by this word.
 
-h2. Features
+## Features
 
 This module exposes its features via the following URLs :
 
