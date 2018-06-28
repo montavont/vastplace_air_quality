@@ -17,7 +17,7 @@ ln -s ../../../vastplace_air_quality vastplace_air_quality
 cd ..
 ```
 
-This linked the ap_subset module sources to a local folder of vastplace, we now need to enable it :
+This linked the air_quality module sources to a local folder of vastplace, we now need to enable it :
 
 <pre>
 vim centraldb/settings.py
@@ -28,7 +28,7 @@ and add
 'experiments.vastplace_air_quality'
 </pre>
  to the *INSTALLED_APPS* entry
-We also need to route the urls to the ap_subset module :
+We also need to route the urls to the air_quality module :
 
 <pre>
 vim centraldb/urls.py
@@ -41,7 +41,7 @@ url(r'^air_quality/', include('experiments.vastplace_air_quality.urls')),
 
 to the *urlpatterns* entry.
 
-the ap_subset module should now be enabled.
+the air_quality module should now be enabled.
 
 ## Uploading a trace
 
@@ -56,7 +56,7 @@ Navigate to the following url, and use the trace upload form.
 /campaignfiles/content
 </pre>
 
-Once the trace uploaded, you are prompted with the detail filling form. You must pick the *ambassadair_mobile* or *ambassadair_static* format. Once save, a map will be plotted.
+Once the trace uploaded, you are prompted with the detail filling form. You must pick the *ambassadair_mobile* or *ambassadair_static* format. Once saved, a map will be plotted.
 Adding a word starting with '#' in the description will also tag this trace as part of the campaign named by this word.
 
 ## Features
